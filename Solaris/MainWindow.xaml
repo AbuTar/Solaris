@@ -3,10 +3,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Solaris"
+        xmlns:local="clr-namespace:Solaris" xmlns:viewmodel="clr-namespace:Solaris.MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        WindowStyle="None"
+        Title="MainWindow" 
+        Height="600"
+        Width="1200"
+        Background="#37474f"
+        AllowsTransparency="False"
+        ResizeMode="CanResizeWithGrip">
+
+    <Window.DataContext>
+        <viewmodel:MainViewModel/>
+    </Window.DataContext>
+    
+    
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="100"/>
+            <ColumnDefinition>
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition>
+                
+            </RowDefinition>
+        </Grid.RowDefinitions>
     </Grid>
 </Window>
