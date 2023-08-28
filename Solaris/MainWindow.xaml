@@ -7,29 +7,112 @@
         mc:Ignorable="d"
         WindowStyle="None"
         Title="MainWindow" 
-        Height="600"
+        Height="650"
         Width="1200"
-        Background="#37474f"
-        AllowsTransparency="False"
+        Background="Transparent"
+        AllowsTransparency="True"
         ResizeMode="CanResizeWithGrip">
 
     <Window.DataContext>
         <viewmodel:MainViewModel/>
     </Window.DataContext>
-    
-    
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition  Width="100"/>
-            <ColumnDefinition>
-            </ColumnDefinition>
-        </Grid.ColumnDefinitions>
+
+    <Border Background="#37474f">
+        
+        <!--This Grid essentially contains all of the UI Elements on Screen-->
+
+        <Grid>
+        <!-- As you can probably guess, the code directly below allows us to choose the Width of the Columns-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="850"/>
+
+            </Grid.ColumnDefinitions>
 
 
-        <Grid.RowDefinitions>
-            <RowDefinition>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.ColumnSpan="3"
+                    Background="#263238"
+                    MouseDown="Border_MouseDown">
+
+                <Grid HorizontalAlignment="Stretch">
+                    <Label Content="Solaris"
+                           Foreground="#455a64"
+                           FontWeight="SemiBold"
+                           FontSize="30"
+                           VerticalAlignment="Center"/>
+
+                    <StackPanel HorizontalAlignment="Right"
+                                Orientation="Horizontal">
+
+                        <Button Width="20"
+                                Height="20"
+                                Content="🗕"
+                                FontSize="15"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Foreground="#455a64"
+                                Margin="0,0,0,3"
+                                Click="MinimiseButton_Click"/>
+
+                        <Button Width="20"
+                                Height="20"
+                                Content="□"
+                                FontSize="15"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Foreground="#455a64"
+                                Click="MaximiseButton_Click"/>
+
+                        <Button Width="20"
+                                Height="20"
+                                Content="🞨"
+                                FontSize="15"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Foreground="#455a64"
+                                Margin="0,3,0,0"
+                                Click="ExitButton_Click"/>
+
+
+                    </StackPanel>
+
+                </Grid>
+
+
+
+            </Border>
+
+
+
+            <StackPanel Grid.Row="1">
+
+                <!--RadioButton/>
+                <RadioButton/>
+                <RadioButton/>
+                <RadioButton/>-->
+
+
                 
-            </RowDefinition>
-        </Grid.RowDefinitions>
-    </Grid>
+
+            </StackPanel>
+
+
+
+
+        </Grid>
+
+
+    </Border>
+
+
+
+
+   
+    
 </Window>
