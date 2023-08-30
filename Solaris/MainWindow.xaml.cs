@@ -55,6 +55,17 @@ namespace Solaris
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+
+        }
+
+        private void HomeIcon_Clicked(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void SettingsIcon_Clicked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -17,16 +17,18 @@
         <viewmodel:MainViewModel/>
     </Window.DataContext>
 
+    
+
     <Border Background="#37474f">
-        
+
         <!--This Grid essentially contains all of the UI Elements on Screen-->
 
         <Grid>
-        <!-- As you can probably guess, the code directly below allows us to choose the Width of the Columns-->
+            <!-- As you can probably guess, the code directly below allows us to choose the Width of the Columns-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50"/>
-                <ColumnDefinition Width="300"/>
-                <ColumnDefinition Width="850"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
 
             </Grid.ColumnDefinitions>
 
@@ -36,16 +38,22 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Border Grid.ColumnSpan="3"
-                    Background="#263238"
-                    MouseDown="Border_MouseDown">
+            <Grid Grid.ColumnSpan="3"
+                    Background="#1c2428"
+                    MouseDown="Border_MouseDown"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch">
+                
+                
 
-                <Grid HorizontalAlignment="Stretch">
+                <Grid>
                     <Label Content="Solaris"
                            Foreground="#455a64"
                            FontWeight="SemiBold"
                            FontSize="30"
-                           VerticalAlignment="Center"/>
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+                    
 
                     <StackPanel HorizontalAlignment="Right"
                                 Orientation="Horizontal">
@@ -76,7 +84,7 @@
                                 Background="Transparent"
                                 BorderThickness="0"
                                 Foreground="#455a64"
-                                Margin="0,3,0,0"
+                                Margin="4,3,8,0"
                                 Click="ExitButton_Click"/>
 
 
@@ -86,21 +94,85 @@
 
 
 
-            </Border>
+            </Grid>
+
+            <Grid Background="#222d32"
+                  Grid.Column="0" Grid.Row="1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="550"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+
+                <StackPanel VerticalAlignment="Center">
+                    <RadioButton Height="30"
+                                 IsChecked="True"
+                                 FontSize="14"
+                                 Style ="{StaticResource HomeIcon}"
+                                 Click="HomeIcon_Clicked"
+                                 Margin="0,0,0,40"/>
+
+                    <RadioButton Height="30"
+                                 IsChecked="True"
+                                 FontSize="14"
+                                 Style ="{StaticResource SettingsIcon}"
+                                 Click="SettingsIcon_Clicked"/>
 
 
 
-            <StackPanel Grid.Row="1">
 
-                <!--RadioButton/>
-                <RadioButton/>
-                <RadioButton/>
-                <RadioButton/>-->
+                </StackPanel>
+
+            </Grid>
 
 
+
+
+
+            <Grid Background="#37474f"
+                  Grid.Column="1"
+                  Grid.Row="1">
+                
                 
 
-            </StackPanel>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="50"/>
+
+
+                </Grid.RowDefinitions>
+
+                
+                <Label Content="Contacts"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontWeight="Medium"
+                       Foreground="#c5c3c8"
+                       Background="Transparent"
+                       FontSize="20" 
+                       Margin="8,5,0,0"/>
+
+                <ListView ItemsSource="{Binding Contacts}"
+                          Background="Transparent"
+                          BorderThickness="0"
+                          Grid.Row="1"
+                          ItemContainerStyle="{StaticResource ContactCard}"/>
+
+
+
+
+
+
+
+
+            </Grid>
+
+
+
+
+            
 
 
 
@@ -113,6 +185,6 @@
 
 
 
-   
-    
+
+
 </Window>
