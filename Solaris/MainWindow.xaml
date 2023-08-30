@@ -17,7 +17,7 @@
         <viewmodel:MainViewModel/>
     </Window.DataContext>
 
-    
+
 
     <Border Background="#37474f">
 
@@ -35,16 +35,15 @@
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
-                <RowDefinition/>
+                <RowDefinition Height="457*"/>
+                <RowDefinition Height="144*"/>
             </Grid.RowDefinitions>
 
             <Grid Grid.ColumnSpan="3"
                     Background="#1c2428"
-                    MouseDown="Border_MouseDown"
-                    HorizontalAlignment="Stretch"
-                    VerticalAlignment="Stretch">
-                
-                
+                    MouseDown="Border_MouseDown">
+
+
 
                 <Grid>
                     <Label Content="Solaris"
@@ -53,7 +52,7 @@
                            FontSize="30"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"/>
-                    
+
 
                     <StackPanel HorizontalAlignment="Right"
                                 Orientation="Horizontal">
@@ -97,7 +96,7 @@
             </Grid>
 
             <Grid Background="#222d32"
-                  Grid.Column="0" Grid.Row="1">
+                  Grid.Column="0" Grid.Row="1" Grid.RowSpan="2">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="550"/>
@@ -113,14 +112,27 @@
                                  Click="HomeIcon_Clicked"
                                  Margin="0,0,0,40"/>
 
+                    <!--<RadioButton Height="30"
+                                 IsChecked="True"
+                                 FontSize="14"
+                                 Style ="{StaticResource LightIcon}"
+                                 Click="LightIcon_Clicked"
+                                 Margin="0,0,0,40"/>-->
+
+                   
+
+
+
+
+                </StackPanel>
+
+                <StackPanel Grid.Row="2">
+
                     <RadioButton Height="30"
                                  IsChecked="True"
                                  FontSize="14"
                                  Style ="{StaticResource SettingsIcon}"
                                  Click="SettingsIcon_Clicked"/>
-
-
-
 
                 </StackPanel>
 
@@ -132,9 +144,9 @@
 
             <Grid Background="#37474f"
                   Grid.Column="1"
-                  Grid.Row="1">
-                
-                
+                  Grid.Row="1" Grid.RowSpan="2">
+
+
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
@@ -144,7 +156,7 @@
 
                 </Grid.RowDefinitions>
 
-                
+
                 <Label Content="Contacts"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
@@ -172,7 +184,7 @@
 
 
 
-            
+
 
 
 

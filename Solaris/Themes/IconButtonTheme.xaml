@@ -15,7 +15,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="SettingsIcon" TargetType="RadioButton">
+    <Style x:Key="LightIcon" TargetType="RadioButton">
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="False">
                 <Setter Property="Opacity" Value="0.5"></Setter>
@@ -29,6 +29,23 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="SettingsIcon" TargetType="RadioButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Opacity" Value="0.5"></Setter>
+            </Trigger>
+        </Style.Triggers>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Image Source="/Images/Settings.png"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
 
 
 

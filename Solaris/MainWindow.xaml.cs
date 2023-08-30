@@ -67,5 +67,10 @@ namespace Solaris
         {
 
         }
+
+        private void LightIcon_Clicked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
