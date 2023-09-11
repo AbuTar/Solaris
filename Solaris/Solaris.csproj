@@ -67,6 +67,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\SignUpForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\ContactCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -80,6 +84,10 @@
     <Compile Include="MVVM\Model\ContactsModel.cs" />
     <Compile Include="MVVM\Model\MessagesModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\SignUpFormViewModel.cs" />
+    <Compile Include="MVVM\View\SignUpForm.xaml.cs">
+      <DependentUpon>SignUpForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -109,7 +117,6 @@
     <Folder Include="Core\" />
     <Folder Include="Fonts\" />
     <Folder Include="Icons\" />
-    <Folder Include="MVVM\View\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Home.png" />

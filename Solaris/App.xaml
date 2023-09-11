@@ -8,10 +8,14 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Themes/IconButtonTheme.xaml"/>
                 <ResourceDictionary Source="Themes/ContactCard.xaml"/>
+                
 
             </ResourceDictionary.MergedDictionaries>
 
-            
+            <DataTemplate DataType="{x:Type viewModel:SignUpFormViewModel}">
+                <view:SignUpView/>
+
+
 
 
 
